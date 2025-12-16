@@ -1,0 +1,25 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: PromotionTask
+metadata:
+  name: promote
+  namespace: kargo-a-go-go
+spec:
+  vars:
+    - name: repoURL
+      value: https://github.com/pbrousseau-sdx/kargo-a-go-go.git
+    - name: branch
+      value: main
+  steps:
+    - uses: git-clone
+      config:
+        repoURL: ${{ vars.repoURL }}
+        checkout:
+          - branch: ${{ cars.branch }}
+            path: ./out
+    - uses: git-push
+      config:
+        path: ./out
+    - uses: argocd-update
+      config:
+        apps:
+          - name: kargo-a-go-go-${{ ctx.stage }}
