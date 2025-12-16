@@ -14,7 +14,7 @@ spec:
     metadata:
       name: kargo-a-go-go-{{ path.basename }}
       annotations:
-        kargo.akuity.io/authorized-stage: kargo-a-go-go-{{ path.basename }}
+        kargo.akuity.io/authorized-stage: kargo-a-go-go:{{ path.basename }}
     spec:
       destination:
         namespace: kargo-a-go-go-{{ path.basename }}
