@@ -9,7 +9,7 @@ spec:
     kind: Namespace
   destinations:
   - name: '*'
-    namespace: plat-*
+    namespace: kargo-a-go-go-*
     server: '*'
   namespaceResourceWhitelist:
   - group: '*'
