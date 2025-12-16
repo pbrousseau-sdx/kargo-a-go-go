@@ -8,7 +8,7 @@ spec:
   subscriptions:
     - git:
         name: plat
-        repoURL: https://github.com/pbrousseau-sdx/kargo-a-go-go.git/charts/plat
+        repoURL: https://github.com/pbrousseau-sdx/kargo-a-go-go.git
         includePaths:
           - charts/plat
         strictSemvers: false
