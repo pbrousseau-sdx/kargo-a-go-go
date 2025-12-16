@@ -10,7 +10,7 @@ spec:
   requestedFreight:
     - origin:
         kind: Warehouse
-        name: plat
+        name: plat-chart
       sources:
         direct: true
   promotionTemplate:
