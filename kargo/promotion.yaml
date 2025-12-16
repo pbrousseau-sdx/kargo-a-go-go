@@ -14,7 +14,7 @@ spec:
       config:
         repoURL: ${{ vars.repoURL }}
         checkout:
-          - branch: ${{ cars.branch }}
+          - branch: ${{ vars.branch }}
             path: ./out
     - uses: git-push
       config:
