@@ -18,11 +18,11 @@ spec:
     spec:
       destination:
         namespace: kargo-a-go-go-{{ path.basename }}
-        servier: https://kubernetes.default.svc
+        server: https://kubernetes.default.svc
       project: kargo-a-go-go
       sources:
         - path: charts/plat
           repoURL:  https://github.com/pbrousseau-sdx/kargo-a-go-go.git
           helm:
-            valuesFiles:
+            valueFiles:
               - "/env/{{ path.basename }}/values.yaml"
