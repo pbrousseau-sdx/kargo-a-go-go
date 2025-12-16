@@ -1,0 +1,14 @@
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: plat-chart
+  namespace: kargo-a-go-go
+spec:
+  interval: 2m0s
+  subscriptions:
+    - git:
+        name: plat
+        repoURL: https://github.com/pbrousseau-sdx/kargo-a-go-go.git/charts/plat
+        includePaths:
+          - charts/plat
+        strictSemvers: false
