@@ -13,3 +13,8 @@ spec:
         name: plat
       sources:
         direct: true
+  promotionTemplate:
+    spec:
+      steps:
+        - task:
+            name: promote
